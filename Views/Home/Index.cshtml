@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@Html.Raw(File.ReadAllText(Server.MapPath("~/Views/Home/index.html")))
+
+
+
+
+
+
+
+
+
+@section featured {
+@Html.Raw(File.ReadAllText(Server.MapPath("~/Views/Home/ta_certify_gallery.html")))
+}
+
