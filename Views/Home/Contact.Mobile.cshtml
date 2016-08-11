@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+
+<!-- <hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup> -->
+
+
+
+@Html.Raw(File.ReadAllText(Server.MapPath("~/Views/Home/contact.mobile.html")))
+
+
+
+@*@section featured {
+    @Html.Raw(File.ReadAllText(Server.MapPath("~/Views/Home/ta_certify_gallery.html")))
+}*@
+

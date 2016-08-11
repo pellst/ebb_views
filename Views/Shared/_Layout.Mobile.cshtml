@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="description" content="Visit Calgary's English Bed, Breakfast and Day Spa.  A cozy B&B in Northwest Calgary, Alberta.">
+    <meta name="keywords" content="an english bed & breakfast and day spa, bed7breakfast, bed&breakfast, bedandbreakfast, dayspa, david, teri collins, massage, therapy, rooms for rent, northwest calgary, alberta, canada, north america, southern, southwestern, englishbb, bb, b$b, b&b, bandb, b&amp;b, &amp, b^b, byb, bbcalgary, tourist attractions, residence, place to stay, hotels, motels, inns, travel, travels, travellers, travelling, ski, skiing, stampede, rocky mountains, banff, dalhousie, business people, airport, silver springs, crowchild trail, sarcee, 53 street nw, calgarybb, shopping centres, shops, center, ctrain, c-train, lrt">
+    <meta property="locale" content="en_US" />
+    <meta property="title" content="An English Bed, Breakfast & Day Spa." />
+    <meta property="url" content="http://englishbb.com" />
+    <meta property="site_name" content="An English Bed, Breakfast & Day Spa." />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/ebbcss")
+    @Styles.Render("~/Content/owl_carousel_style")
+
+    @Styles.Render("~/Content/jqmstyle_cdn")
+
+
+
+    @Scripts.Render("~/bundles/jqmobile_cdn")
+    @Scripts.Render("~/bundles/owl_carousel_js")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    <script>
+
+    (function () {
+
+        //        $(document).bind("swiperight", function () {
+        //            $.mobile.changePage('at_Url.Action("IndexMobile", "Store")');
+        //        });
+        //
+        //        $(document).bind("swipeleft", function () {
+        //            addToList("swipeleft");
+        //        });
+        //
+        //        $(window).bind("orientationchange", function (event) {
+        //            addToList(event.orientation);
+        //        });
+
+        $(document).bind("pagechange", function (event, ui) {
+
+
+            $("#owl-example").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                items: 4,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+
+            });
+
+            $("#owl-example2").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                items: 4,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+
+            });
+
+        });
+
+    }());
+
+
+    </script>
+
+    
+    
+    <script>
+        $(document).ready(function () {
+
+            //$("#owl-example").owlCarousel();
+            //<div id="owl-example" class="owl-carousel">
+
+
+            //<div id="owl-example" >
+            $("#owl-example").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                items: 4,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+
+            });
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+
+            <div class="row">
+                <div style="background:url(../../images/banner_a.jpg) orange">
+                    <div align="center" style="padding:14px">
+                        <p>
+                            <img class="img-responsive" id="EnglishBB_Title" alt="An English Bed, Breakfast & Day Spa" src="images/logo_english3.gif" />
+                        </p>
+                        <div align="center">
+                            <a href="http://www.powell-graphics4.com/calendar/221/calendar.cgi" class="ui-btn ui-corner-all ui-shadow ui-icon-info ui-btn-icon-right">Availability</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")" data-icon="home">Home</a></li>
+                    <li><a href="@Url.Action("Rates", "Home")" data-icon="star">Rates</a></li>
+                    <li><a href="@Url.Action("Rooms", "Home")" data-icon="user">Rooms</a></li>
+                    <li><a href="@Url.Action("Menus", "Home")" data-icon="bars">Menus</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")" data-icon="phone">Contact</a></li>
+                </ul>
+            </div>
+            <div data-role="controlgroup" data-type="vertical">
+                @*<p>More Information:</p>*@
+                <a href="@Url.Action("Dayspa", "Home")" class="ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-right">Day Spa</a>
+                <a href="@Url.Action("Directions", "Home")" class="ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-right">Directions</a>
+                <a href="@Url.Action("Links", "Home")" class="ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-right">Links</a>
+                <a href="@Url.Action("Gallery", "Home")" class="ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-right">Gallery</a>
+                @*<a href="http://www.powell-graphics4.com/calendar/221/calendar.cgi" class="ui-btn ui-corner-all ui-shadow ui-icon-carat-r ui-btn-icon-right">Availability</a>*@
+
+            </div>
+
+            
+
+
+
+            @*<ul data-role="listview" data-inset="true">
+                    <li>
+                        <a href="Rooms"><img src="~/images/nav_rooms_on.gif"></a>
+                    </li>
+                    <li>
+                        <a href="Rates"><img src="~/images/nav_rates_on.gif"></a>
+                    </li>
+                    <li>
+                        <a href="Menus"><img src="~/images/nav_menus_on.gif"></a>
+                    </li>
+                </ul>*@
+
+
+        </div>
+
+        <div data-role="content">
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+            <section class="content-wrapper main-content clear-fix">
+                @RenderSection("featured", required: false)
+            </section>
+        </div>
+
+  
+
+        
+            <div data-role="controlgroup" data-type="vertical">
+                @*<p>More Information:</p>*@
+                <a href="@Url.Action("Dayspa", "Home")" class="ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-right ui-mini">Day Spa</a>
+                <a href="@Url.Action("Directions", "Home")" class="ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-right ui-mini">Directions</a>
+                <a href="@Url.Action("Links", "Home")" class="ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-right ui-mini">Links</a>
+                <a href="@Url.Action("Gallery", "Home")" class="ui-btn ui-corner-all ui-icon-carat-r ui-btn-icon-right ui-mini">Gallery</a>
+                <a href="http://www.powell-graphics4.com/calendar/221/calendar.cgi" class="ui-btn ui-corner-all ui-shadow ui-icon-carat-r ui-btn-icon-right ui-mini">Availability</a>
+
+            </div>
+        
+        <div data-role="footer">
+
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")" data-icon="home">Home</a></li>
+                    <li><a href="@Url.Action("Rates", "Home")" data-icon="star">Rates</a></li>
+                    <li><a href="@Url.Action("Rooms", "Home")" data-icon="user">Rooms</a></li>
+                    <li><a href="@Url.Action("Menus", "Home")" data-icon="bars">Menus</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")" data-icon="phone">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="content-wrapper">
+                <div align="center">
+
+                    <p class="small">
+                        &copy; @DateTime.Now.Year - An English Bed, Breakfast &amp; Day Spa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -  Webmaster: Troy Pells.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
