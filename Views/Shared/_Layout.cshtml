@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="description" content="Visit Calgary's English Bed, Breakfast and Day Spa.  A cozy B&B in Northwest Calgary, Alberta.">
+    <meta name="keywords" content="an english bed & breakfast and day spa, bed7breakfast, bed&breakfast, bedandbreakfast, dayspa, david, teri collins, massage, therapy, rooms for rent, northwest calgary, alberta, canada, north america, southern, southwestern, englishbb, bb, b$b, b&b, bandb, b&amp;b, &amp, b^b, byb, bbcalgary, tourist attractions, residence, place to stay, hotels, motels, inns, travel, travels, travellers, travelling, ski, skiing, stampede, rocky mountains, banff, dalhousie, business people, airport, silver springs, crowchild trail, sarcee, 53 street nw, calgarybb, shopping centres, shops, center, ctrain, c-train, lrt">
+    <meta property="locale" content="en_US" />
+    <meta property="title" content="An English Bed, Breakfast & Day Spa." />
+    <meta property="url" content="http://englishbb.com" />
+    <meta property="site_name" content="An English Bed, Breakfast & Day Spa." />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/owl_carousel_style")
+    @Styles.Render("~/Content/ebbcss")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/owl_carousel_js")
+
+    @Scripts.Render("~/bundles/ebbscript")
+    <script>
+        $(document).ready(function () {
+
+            //$("#owl-example").owlCarousel();
+            //<div id="owl-example" class="owl-carousel">
+
+
+            //<div id="owl-example" >
+            $("#owl-example").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                items: 4,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+
+            });
+
+            $("#owl-example2").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                items: 4,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+
+            });
+
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+    <div>
+        <header>
+            <div class="row">
+                <div style="background:url(../../images/banner_a.jpg) orange">
+                    <div align="center" style="padding:14px">
+                        <p>
+                            <img class="img-responsive" id="EnglishBB_Title" alt="An English Bed, Breakfast & Day Spa" src="images/logo_english3.gif" />
+                        </p>
+                        <div align="center">
+                            
+                                <a href="http://www.powell-graphics4.com/calendar/221/calendar.cgi" class="btn btn-lg btn-primary">Availability</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="Contact">English B&amp;B</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Rooms", "Rooms", "Home")</li>
+                            <li>@Html.ActionLink("Rates", "Rates", "Home")</li>
+                            <li>@Html.ActionLink("Menus", "Menus", "Home")</li>
+                            <li>@Html.ActionLink("Day Spa", "Dayspa", "Home")</li>
+                            <li>@Html.ActionLink("Directions", "Directions", "Home")</a></li>
+
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <!-- <li>@Html.ActionLink("Links", "Links", "Home")</li> -->
+                            <li class="dropdown">
+                                <a class="dro
+                                <a class=" dropdown-toggle" data-toggle="dropdown" href="Links">
+                                    Links
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Gallery", "Gallery", "Home")</li>
+
+                                    <li>@Html.ActionLink("Links", "Links", "Home")</a></li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="col-md-12">
+            <div class="row">
+
+                <div class="col-md-12">
+                    @RenderBody()
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    @RenderSection("featured", required: false)
+                </div>
+            </div>
+
+
+        </div>
+
+        <footer>
+
+            <div align="center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning">@Html.ActionLink("Home", "Index", "Home")</button>
+                    <button type="button" class="btn btn-warning">@Html.ActionLink("Rooms", "Rooms", "Home")</button>
+                    <button type="button" class="btn btn-warning">@Html.ActionLink("Rates", "Rates", "Home")</button>
+                    <button type="button" class="btn btn-warning">@Html.ActionLink("Menus", "Menus", "Home")</button>
+                    <button type="button" class="btn btn-warning">@Html.ActionLink("Day Spa", "Dayspa", "Home")</button>
+                    <button type="button" class="btn btn-warning">@Html.ActionLink("Links", "Links", "Home")</button>
+                    <button type="button" class="btn btn-warning">@Html.ActionLink("Contact Us", "Contact", "Home")</button>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div align="center">
+
+                    <p class="small">
+                        &copy; @DateTime.Now.Year - An English Bed, Breakfast &amp; Day Spa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -   Webmaster: Troy Pells.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
